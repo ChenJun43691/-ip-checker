@@ -1,5 +1,5 @@
 import aiohttp
-from config import SECURITYTRAILS_API_KEY, ABUSEIPDB_API_KEY  # ✅ 只保留這兩個 API Key
+from config import SECURITYTRAILS_API_KEY, ABUSEIPDB_API_KEY  #  只保留這兩個 API Key
 
 # SecurityTrails API
 SECURITYTRAILS_URL = "https://api.securitytrails.com/v1"

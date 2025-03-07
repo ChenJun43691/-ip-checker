@@ -20,9 +20,9 @@ if os.path.exists(icon_path):
         icon_photo = ImageTk.PhotoImage(icon_image)
         root.iconphoto(False, icon_photo)
     except Exception as e:
-        print(f"⚠️ 載入圖示失敗: {e}")
+        print(f" 載入圖示失敗: {e}")
 else:
-    print("⚠️ 圖示文件不存在，將不載入自訂圖示")
+    print(" 圖示文件不存在，將不載入自訂圖示")
 
 # **變數設定**
 file_path = tk.StringVar()
@@ -93,16 +93,16 @@ tk.Label(root, textvariable=progress_label, fg="red").pack(pady=5)
 tk.Label(root, text=get_random_quote(), fg="gray", font=("Arial", 10)).pack(pady=10)
 
 # **About Me（放在 UI 最下方）**
-about_text = """🚔 IP 批量查詢工具 功能說明 🚔  
+about_text = """IP 批量查詢工具 功能說明 
 開發者：高雄市刑大
-🎯 用途：快速查詢可疑 IP，判斷是否為 VPN / 代理 / 黑名單  
-🔎 功能：
-   ✅ 批量 IP 查詢  
-   ✅ VPN / 代理 / 資料中心 判定  
-   ✅ 黑名單評分 (AbuseIPDB)  
-   ✅ WHOIS 資訊  
+ 用途：快速查詢可疑 IP，判斷是否為 VPN / 代理 / 黑名單  
+功能：
+   批量 IP 查詢  
+   VPN / 代理 / 資料中心 判定  
+   黑名單評分 (AbuseIPDB)  
+   WHOIS 資訊  
 
-📌 建議 & 反饋：來信“e43691@kcg.gov.tw”(來信註明單位、姓名、公務電話)
+建議 & 反饋：來信“e43691@kcg.gov.tw”(來信註明單位、姓名、公務電話)
 """
 
 about_label = tk.Label(root, text=about_text, fg="gray", font=("Arial", 10), justify="left", anchor="w")

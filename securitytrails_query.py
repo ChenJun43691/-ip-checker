@@ -1,12 +1,12 @@
 import aiohttp
-from config import SECURITYTRAILS_API_KEY  # ✅ 從 `config.py` 讀取 API Key
+from config import SECURITYTRAILS_API_KEY  # 從 `config.py` 讀取 API Key
 
 BASE_URL = "https://api.securitytrails.com/v1/ips"
 
 async def fetch_securitytrails_data(session, ip, endpoint):
     """ 通用函數，查詢 SecurityTrails API """
     url = f"{BASE_URL}/{ip}/{endpoint}"
-    headers = {"APIKEY": SECURITYTRAILS_API_KEY}  # ✅ 使用 `config.py` 內的 API Key
+    headers = {"APIKEY": SECURITYTRAILS_API_KEY}  # 使用 `config.py` 內的 API Key
     
     async with session.get(url, headers=headers) as response:
         if response.status == 200:
